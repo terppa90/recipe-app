@@ -1,0 +1,22 @@
+<!--Reseptit komponentti, jossa listataan kaikki reseptit, voi poistaa 
+    reseptejä ja tarkastella yksittäisiä reseptejä.-->
+<div class="container">
+  <h3>Reseptipankki</h3>
+  <div class="row">
+    <div class="col-xs">
+      <ul class="list-group">
+        <li
+          class="list-group-item list-group-item-action"
+          *ngFor="let recipe of recipes"
+        >
+          <a routerLink="/detail/{{ recipe.id }}">
+            <span class="badge">{{ recipe.id }}</span> {{ recipe.name }}
+          </a>
+          <button class="close" title="delete recipe" (click)="delete(recipe)">
+            x
+          </button>
+        </li>
+      </ul>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,54 @@
+@import "~bootstrap/dist/css/bootstrap.css";
+a {
+  text-decoration: none;
+}
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+}
+h3 {
+  text-align: left;
+  margin-top: 1em;
+  margin-bottom: 0.5em;
+}
+h4 {
+  position: relative;
+  font-size: 250%;
+}
+.container {
+  display: block;
+  float: left;
+  margin: 0;
+}
+.row {
+  margin-left: 0em;
+  margin-bottom: 1em;
+}
+.row row-cols-2 {
+  width: 100%;
+  padding-top: 1em;
+  margin: 0;
+}
+.col {
+  padding: 1em auto;
+  margin: 0;
+}
+.btn {
+  display: inline-block;
+  padding: 1.5em;
+  margin: 0;
+  margin-bottom: 1em;
+  font-size: 0.5em;
+  width: 100%;
+  height: auto;
+}
+
+@media (max-width: 768px) {
+  h4 {
+    position: relative;
+    font-size: 200%;
+    display: block;
+    float: none;
+  }
+}

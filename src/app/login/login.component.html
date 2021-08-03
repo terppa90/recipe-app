@@ -1,0 +1,23 @@
+<!--Sisäänkirjautuminen-->
+<div class="container-fluid">
+  <div class="d-flex mt-3 mb-3">Kirjautuminen</div>
+  <form #f="ngForm" (ngSubmit)="onSubmit(f.value)">
+    <div class="form-group">
+      <label for="username">Tunnus:</label>
+      <input type="text" class="form-control" name="username" ngModel />
+      <label for="password">Salasana:</label>
+      <input
+        type="password"
+        class="form-control"
+        name="password"
+        ngModel
+      /><br />
+      <button type="submit" class="btn btn-light">Kirjaudu</button>
+    </div>
+    <div *ngIf="error" class="alert alert-danger">{{ error }}</div>
+  </form>
+  <!--Linkki rekisteröitymis välilehteen-->
+  <div>
+    <a href="/register">Rekisteröidy</a>
+  </div>
+</div>

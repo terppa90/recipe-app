@@ -1,0 +1,9 @@
+<!--Tämä komponentti esittää viestejä, jotka se saa 
+messageservicestä. -->
+<div class="container">
+  <div *ngIf="messageService.messages.length">
+    <h2>Ilmoitukset</h2>
+    <button class="clear" (click)="messageService.clear()">Tyhjennä</button>
+    <div *ngFor="let message of messageService.messages">{{ message }}</div>
+  </div>
+</div>
