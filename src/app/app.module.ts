@@ -21,6 +21,9 @@ import { RegisterComponent } from './register/register.component';
 import { RecipeSearchComponent } from './recipe-search/recipe-search.component';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 
+import { Ng2SearchPipeModule } from 'ng2-search-filter';
+import { SearchComponent } from './search/search.component';
+
 /*
 import { MatInputModule } from '@angular/material/input';
 import { MatSelectModule } from '@angular/material/select';
@@ -43,6 +46,7 @@ import { MatChipsModule } from '@angular/material/chips';
     RegisterComponent,
     RecipeSearchComponent,
     PageNotFoundComponent,
+    SearchComponent,
   ],
   imports: [
     BrowserModule,
@@ -51,6 +55,7 @@ import { MatChipsModule } from '@angular/material/chips';
     ReactiveFormsModule,
     HttpClientModule,
     BrowserAnimationsModule,
+    Ng2SearchPipeModule,
     /*
     MatInputModule,
     MatSelectModule,

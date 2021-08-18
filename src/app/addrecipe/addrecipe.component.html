@@ -6,31 +6,60 @@
     <div class="form-group">
       <label for="recipeID">Reseptin ID</label>
       <input
+        [class.is-invalid]="
+          myForm.get('id').invalid && myForm.get('id').touched
+        "
         formControlName="id"
         type="text"
         class="form-control"
         id="recipeID"
       />
+      <small
+        [class.d-none]="myForm.get('id').valid || myForm.get('id').untouched"
+        class="text-danger"
+        >ID vaaditaan</small
+      >
     </div>
 
     <div class="form-group">
       <label for="recipeName">Reseptin nimi</label>
       <input
+        [class.is-invalid]="
+          myForm.get('name').invalid && myForm.get('name').touched
+        "
         formControlName="name"
         type="text"
         class="form-control"
         id="recipeName"
       />
+      <div *ngIf="myForm.get('name').invalid && myForm.get('name').touched">
+        <small *ngIf="myForm.get('name').errors?.required" class="text-danger"
+          >Nimi vaaditaan</small
+        >
+        <small *ngIf="myForm.get('name').errors?.minlength" class="text-danger"
+          >Tämän kentän täytyy olla vähintään 3 merkkiä pitkä</small
+        >
+      </div>
     </div>
 
     <div class="form-group">
       <label for="recipeAuthor">Reseptin tekijä</label>
       <input
+        [class.is-invalid]="
+          myForm.get('author').invalid && myForm.get('author').touched
+        "
         formControlName="author"
         type="text"
         class="form-control"
         id="recipeAuthor"
       />
+      <small
+        [class.d-none]="
+          myForm.get('author').valid || myForm.get('author').untouched
+        "
+        class="text-danger"
+        >Reseptin tekijä vaaditaan</small
+      >
     </div>
     <!--Ainesosat tulee supplies-form -komponentin kautta ( <app-supplies-form> )-->
     <div class="form-group">
@@ -60,12 +89,27 @@
 
     <div class="form-group">
       <label for="recipeRecipe">Reseptin ohje</label>
-      <input
+      <textarea
+        [class.is-invalid]="
+          myForm.get('recipe').invalid && myForm.get('recipe').touched
+        "
         formControlName="recipe"
         type="text"
         class="form-control"
+        rows="5"
         id="recipeRecipe"
-      />
+      >
+      </textarea>
+      <div *ngIf="myForm.get('recipe').invalid && myForm.get('recipe').touched">
+        <small *ngIf="myForm.get('recipe').errors?.required" class="text-danger"
+          >Reseptin ohje vaaditaan</small
+        >
+        <small
+          *ngIf="myForm.get('recipe').errors?.minlength"
+          class="text-danger"
+          >Tämän kentän täytyy olla vähintään 20 merkkiä pitkä</small
+        >
+      </div>
     </div>
     <!--Buttoni jolla lomake lähetetään-->
     <button class="btn btn-primary" type="submit" [disabled]="!myForm.valid">

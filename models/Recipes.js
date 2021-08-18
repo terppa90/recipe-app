@@ -3,7 +3,7 @@ const mongoose = require("mongoose");
 
 // Skeeman luonti. Skeema määrittää kannassa olevan tiedon muodon. (avain-arvoparit)
 const RecipeSchema = new mongoose.Schema({
-  id: { type: Number, unique: true, required: true },
+  id: { type: Number, unique: true },
   name: { type: String, required: true },
   author: { type: String, required: true },
   supplies: [

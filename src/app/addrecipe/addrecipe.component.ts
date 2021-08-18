@@ -50,11 +50,14 @@ export class AddrecipeComponent implements OnInit {
 
   public generateMyForm(): void {
     this.myForm = new FormGroup({
-      id: new FormControl('', Validators.required),
-      name: new FormControl('', Validators.required),
-      author: new FormControl(''),
+      id: new FormControl(''),
+      name: new FormControl('', [Validators.required, Validators.minLength(3)]),
+      author: new FormControl('', Validators.required),
       supplies: new FormArray([]),
-      recipe: new FormControl('', Validators.required),
+      recipe: new FormControl('', [
+        Validators.required,
+        Validators.minLength(20),
+      ]),
     });
   }
   // Lisätään uusi ainesosa/raaka-aine

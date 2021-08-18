@@ -1,0 +1,26 @@
+<div class="m-3">
+  <h3>Hae reseptiä</h3>
+  <div class="wrap">
+    <div class="search">
+      <input
+        type="text"
+        [(ngModel)]="searchTerm"
+        class="searchTerm"
+        placeholder="Etsi reseptiä..."
+      />
+    </div>
+
+    <div>
+      <ul
+        class="search-result"
+        *ngFor="let item of recipes | filter: searchTerm"
+      >
+        <li *ngIf="searchTerm">
+          <a routerLink="/detail/{{ item.id }}">
+            {{ item.name }}
+          </a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</div>
