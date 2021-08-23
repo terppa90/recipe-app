@@ -68,7 +68,7 @@ export class AddrecipeComponent implements OnInit {
   public deleteSupply(index: number): void {
     this.suppliesArray.removeAt(index);
   }
-
+  // Lomakkeen lähetysmetodi
   public submitRecipeForm(): void {
     console.log(this.myForm.value);
     SuppliesFormComponent.addRecipeSupplyItem();

@@ -42,7 +42,7 @@ Sovelluksen käynnistyksen yhteydessä avautuu kirjautumissivu, josta valmiiksi 
 
 2.1 Kuvaus eri teknologioiden käyttämisestä työssä
 
-Sovelluksen backendinä toimii Heroku ja frontend on hostattu Firebaseen. Tietokantana on käytetty MongoDB Atlas -pilvitietokantapalvelua. REST API on toteutettu Node.js:n, expressin ja MongoDB Atlas:n avulla. REST-API on suojattu autentikaatiolla (JWT) ja salasanat kryptattu bcryptillä. Tyyleissä käytetty Bootstrapia. Lomakkeessa käytetty validointia. CORS -moduulia käytetty datan kulkemisen sallimiseksi eri osoitteista peräisin olevien sovellusten kesken.
+Sovelluksen backendinä toimii Heroku ja frontend on hostattu Firebaseen. Tietokantana on käytetty MongoDB Atlas -pilvitietokantapalvelua. REST API on toteutettu Node.js:n, expressin ja MongoDB Atlas:n avulla. REST-API on suojattu autentikaatiolla (JWT) ja salasanat kryptattu bcryptillä. Tyyleissä käytetty Bootstrapia. Lomakkeessa käytetty validointia. CORS -moduulia käytetty datan kulkemisen sallimiseksi eri osoitteista.
 
 2.2 Komennot, joilla kehitysversion saa GitHubista omalle koneelle toimimaan
 
@@ -55,11 +55,18 @@ git clone https://github.com/terppa90/exp-recipes
 
 Sovellus löytyy julkaistuna osoitteesta:
 
+https://angular-recipe-app-2021.web.app/login
+
+Valmiit tunnarit:
+
+käyttäjätunnus: testi
+salasana: testi
+
 3. Reflektio ja ajankäyttö
 
 3.1 Miten työ onnistui? Mikä oli helppoa ja mikä vaikeaa?
 
-Työ onnistui omiin taitoihin ja kokemukseen suhteutettuna mielestäni ihan kelvollisesti. Joitain asioita olisi varmasti voinut tehdä huomattavasti paremminkin. Vastoinkäymisiäkin luonnollisesti ilmeni, yksi niistä ja varmasti mieleenpainuvin oli searchbar -hakukentän kanssa ilmenneet ongelmat siirryttäessä käyttämään backendiä. Reseptin haku ei enää hakenutkaan yksittäisiä reseptejä haun perusteella vaan esitti kaikki tietokannasta tulevat reseptit riippumatta siitä mitä hakukenttään kirjoitti. Päädyin lopulta luopumaan tästä hakukenttä -versiosta ja tyydyin pelkistetympään versioon, joka jäi hieman kaivelemaan, koska nyt käytössä ei ollut observableja/subscribejä. Lomakkeen kanssa esiintyi myös hieman päänvaivaa mutta loppuviimein lomake onnistui mielestäni kohtuu hyvin, tosin käyttäjä joutuu laittamaan ID:n itse, mikä ei ole järkevä ratkaisu, mutta runsaasta ajankäytöstä huolimatta en löytänyt tähän jostain syystä toimivaa ratkaisua. Positiivisena yllätyksenä sanottakoon että backendin/REST API:n tekeminen ei ollut ihan niin haastavaa mitä olisin odottanut.
+Työ onnistui omiin taitoihin ja kokemukseen suhteutettuna mielestäni ihan kelvollisesti. Joitain asioita olisi varmasti voinut tehdä huomattavasti paremminkin. Vastoinkäymisiäkin luonnollisesti ilmeni, yksi niistä ja varmasti mieleenpainuvin oli searchbar -hakukentän kanssa ilmenneet ongelmat siirryttäessä käyttämään backendiä. Reseptin haku ei enää hakenutkaan yksittäisiä reseptejä haun perusteella vaan esitti kaikki tietokannasta tulevat reseptit riippumatta siitä mitä hakukenttään kirjoitti. Päädyin lopulta luopumaan tästä hakukenttä -versiosta ja tyydyin pelkistetympään versioon, joka jäi hieman kaivelemaan. Lomakkeen kanssa esiintyi myös hieman päänvaivaa mutta loppuviimein lomake onnistui mielestäni kohtuu hyvin, tosin käyttäjä joutuu laittamaan ID:n itse, mikä ei ole järkevä ratkaisu, mutta runsaasta ajankäytöstä huolimatta en löytänyt tähän jostain syystä toimivaa ratkaisua. Positiivisena yllätyksenä sanottakoon että backendin/REST API:n tekeminen ei ollut ihan niin haastavaa mitä olisin odottanut.
 
 3.2 Kuinka paljon käytit aikaa loppuharjoitustyön tekemiseen?
 

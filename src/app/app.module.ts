@@ -18,19 +18,10 @@ import { DashboardComponent } from './dashboard/dashboard.component';
 import { AddrecipeComponent } from './addrecipe/addrecipe.component';
 import { SuppliesFormComponent } from './addrecipe/supplies-form/supplies-form.component';
 import { RegisterComponent } from './register/register.component';
-import { RecipeSearchComponent } from './recipe-search/recipe-search.component';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 
 import { Ng2SearchPipeModule } from 'ng2-search-filter';
 import { SearchComponent } from './search/search.component';
-
-/*
-import { MatInputModule } from '@angular/material/input';
-import { MatSelectModule } from '@angular/material/select';
-import { MatButtonModule } from '@angular/material/button';
-import { MatCheckboxModule } from '@angular/material/checkbox';
-import { MatChipsModule } from '@angular/material/chips';
-*/
 
 @NgModule({
   declarations: [
@@ -44,7 +35,6 @@ import { MatChipsModule } from '@angular/material/chips';
     AddrecipeComponent,
     SuppliesFormComponent,
     RegisterComponent,
-    RecipeSearchComponent,
     PageNotFoundComponent,
     SearchComponent,
   ],

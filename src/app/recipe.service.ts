@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 import { Recipe } from './recipe';
 import { Observable, of } from 'rxjs';
-import { catchError, map, tap } from 'rxjs/operators';
+import { catchError, tap } from 'rxjs/operators';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { MessageService } from './message.service';
 
@@ -77,22 +77,7 @@ export class RecipeService {
       .pipe(catchError(this.handleErr));
   }
 
-  /* GET recipes whose name contains search term */
-  searchRecipes(term: string): Observable<Recipe[]> {
-    if (!term.trim()) {
-      return of([]);
-    }
-    return this.http.get<Recipe[]>(`${this.recipesUrl}/?name=${term}`).pipe(
-      tap((x) =>
-        x.length
-          ? this.log(`found recipes matching "${term}"`)
-          : this.log(`no recipes matching "${term}"`)
-      ),
-      catchError(this.handleError<Recipe[]>('searchRecipes', []))
-    );
-  }
-
-  /** Log a HeroService message with the MessageService */
+  /** Log a message with the MessageService */
   private log(message: string) {
     this.messageService.add(`RecipeService: ${message}`);
   }
